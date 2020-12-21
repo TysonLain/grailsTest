@@ -17,4 +17,17 @@ class SimpleService {
         p.save()
     }
 
+    @Transactional
+    def updatePerson() {
+    	def p = Person.get(2)
+    	p.age = 40
+    	p.save()
+    }
+
+    @Transactional
+    def deletePerson() {
+    	def p = Person.get(2)
+    	p.delete()
+    }
+
 }

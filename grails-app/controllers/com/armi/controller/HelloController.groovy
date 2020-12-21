@@ -16,6 +16,17 @@ class HelloController {
         render p
     }
 
+    def update() {
+        def p = simpleService.updatePerson()
+        render p
+    }
+
+    def delete() {
+        def p = simpleService.deletePerson()
+        p = simpleService.listPerson()
+        render p
+    }
+
     def test() {
         render 'test'
     }
